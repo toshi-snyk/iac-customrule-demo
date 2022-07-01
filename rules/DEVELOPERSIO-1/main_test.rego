@@ -12,7 +12,7 @@ test_DEVELOPERSIO_1 {
 
 	# array containing cases where the rule is denied
 	denied_test_cases := [{
-		"want_msgs": ["input.resource.test[denied].todo"], # verifies that the correct msg is returned by the denied rule
+		"want_msgs": ["input.resource.aws_s3_bucket[denied].tags"], # verifies that the correct msg is returned by the denied rule
 		"fixture": "denied.tf",
 	}]
 
