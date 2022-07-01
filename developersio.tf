@@ -12,14 +12,14 @@ resource "aws_s3_bucket" "allowed" {
 }
 
 # This fails as no tags are provided.
-resource "aws_s3_bucket" "allowed" {
+resource "aws_s3_bucket" "denied_1" {
   bucket = "my-tutorial-bucket"
   acl    = "private"
 }
 
 # This fails as only Cost_Center is provided, Team is missing.
 # This is an example of a resource that correctly adheres to the standard
-resource "aws_s3_bucket" "allowed" {
+resource "aws_s3_bucket" "denied_2" {
   bucket = "my-tutorial-bucket"
   acl    = "private"
   
